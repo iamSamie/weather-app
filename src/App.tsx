@@ -1,6 +1,10 @@
-import { Search } from "./features/search/Search"
+import { PickSearchResult } from './components/PickSearchResult'
+import { Search } from './features/search/Search'
+import { useAppSelector } from './rtk/hooks'
 
 function App() {
+    const sitiesName = useAppSelector((state) => state.search.geo)
+
     return (
         <div className="app">
             <div className="main">
@@ -8,6 +12,7 @@ function App() {
                     <div className="header">
                         <div className="header__settings"></div>
                         <Search />
+                        <PickSearchResult />
                     </div>
                     <div className="center">
                         <div className="center__number"></div>

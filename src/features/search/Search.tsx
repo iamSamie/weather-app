@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Lupa } from '../../components/Lupa'
 import { useAppDispatch } from '../../rtk/hooks'
 import { geoAsyncThunk } from './GeoAsyncThunk'
 
@@ -14,11 +15,15 @@ function Search() {
 
     return (
         <div className="header__search">
-            <input
-                value={searchValue}
-                onChange={(event) => setSearchValue(event.target.value)}
-                onBlur={() => handleBlur(searchValue)}
-            />
+            <div className="header__search__block">
+                    <input
+                        value={searchValue}
+                        onChange={(event) => setSearchValue(event.target.value)}
+                    />
+                    <div className="background__lupa" onClick={() => handleBlur(searchValue)}>
+                        <Lupa />
+                    </div>
+            </div>
         </div>
     )
 }
