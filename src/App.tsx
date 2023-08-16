@@ -1,3 +1,4 @@
+import { MainInfo } from './components/MainInfo'
 import { PickSearchResult } from './components/PickSearchResult'
 import { Search } from './features/search/Search'
 import { useAppSelector } from './rtk/hooks'
@@ -12,19 +13,10 @@ function App() {
                     <div className="header">
                         <div className="header__settings"></div>
                         <Search />
-                        {sitiesName && sitiesName.map((elem) => (
-                            <PickSearchResult key={elem.lat} {...elem}/>
-                        ))}
-                        {/* <PickSearchResult /> */}
+                        {sitiesName &&
+                            sitiesName.map((elem) => <PickSearchResult key={elem.lat} {...elem} />)}
                     </div>
-                    <div className="center">
-                        <div className="center__number"></div>
-                        <div className="center__weather"></div>
-                    </div>
-                    <div className="footer">
-                        <div className="footer__info"></div>
-                        <div className="footer__map"></div>
-                    </div>
+                    <MainInfo />
                 </div>
                 <div className="main_picture"></div>
             </div>

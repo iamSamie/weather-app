@@ -11,6 +11,7 @@ export interface RootWeather {
     id: number
     name: string
     cod: number
+    coord: Coord
 }
 
 export interface Weather {
@@ -52,4 +53,9 @@ export interface GeolocationType {
     lon: number
     country: string
     state: string
+}
+
+export type Coord = {
+    lon: number,
+    lat: number
 }

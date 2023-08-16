@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
 }
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
@@ -59,7 +60,7 @@ code {
 }
 
 .center {
-    height: 42%;
+    height: 35%;
     display: flex;
 }
 .footer {
@@ -78,8 +79,7 @@ code {
     justify-self: end;
     span{
         margin-top: 30px;
-        font-size: 24px;
-        color: white;
+        font-size: 18px;
     }
 }
 .header__search {
@@ -96,7 +96,6 @@ code {
             border: none;
             border-radius: 7px 0 0 7px;
             background-color: grey;
-            color: white;
         }
         .background__lupa {
             display: flex;
@@ -112,6 +111,11 @@ code {
 .center__number {
     width: 50%;
     height: 100%;
+    font-size: 80px;
+    // color: white;
+    text-align: center;
+    display: flex;
+    align-items: end;
 }
 .center__weather {
     width: 50%;
@@ -120,14 +124,28 @@ code {
 .footer__info {
     width: 60%;
     height: 100%;
+    h1{
+        font-size: 32px;
+    }
+    h2{
+        font-size: 14px;
+    }
+    span{
+        font-size: 18px;
+    }
+    .coord{
+        text-align: end;
+        font-size: 14px;
+    }
 }
 .footer__map {
     width: 40%;
     height: 100%;
-}
-
-.div {
-    // width: 150px;
-    // height: 150px;
-    background-color: black;
+    padding-left: 2%;
+    iframe{
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 15px;
+    }
 }
