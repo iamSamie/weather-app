@@ -3,7 +3,6 @@ import { Map } from './Map'
 
 const Footer = () => {
     const weather = useAppSelector((state) => state.search.weather)
-    const date = new Date()
 
     return (
         weather && (
@@ -12,9 +11,6 @@ const Footer = () => {
                     <h1>
                         {weather.name.toUpperCase()}, {weather.sys.country}
                     </h1>
-                    <h2>
-                        {date.getHours()}:{date.getMinutes()}
-                    </h2>
                     <span>{weather.weather[0].main.toUpperCase()}</span>
                     <br />
                     <span>FEELS LIKE: {Math.round(weather.main.feels_like)}</span>
@@ -33,7 +29,7 @@ const Footer = () => {
                     </p>
                 </div>
                 <div className="footer__map">
-                    <Map />
+                    {weather && <Map lat={weather.coord.lat} lon={weather.coord.lon} />}
                 </div>
             </div>
         )

@@ -11,9 +11,13 @@ function PickSearchResult(props: GeolocationType) {
         dispatch(removeGeo())
     }
 
-    return <div className="search__results">
-        <span onClick={() => handleClick({lat, lon})}>{name}, {state}</span>
-    </div>
+    return (
+        <div className="search__results" onClick={() => handleClick({ lat, lon })}>
+            <span>
+                {name}, {state}
+            </span>
+        </div>
+    )
 }
 
 export { PickSearchResult }

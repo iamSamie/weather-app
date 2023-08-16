@@ -16,7 +16,7 @@ code {
 #root {
     width: 100vw;
     height: 100vh;
-    background-image: url(../public/image/backgroungImg.jpeg);
+    background-image: url(../public/image/backgroungImgCopy.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -29,7 +29,7 @@ code {
     display: flex;
     width: 90vw;
     height: 95%;
-    background-image: url(../public/image/backgroungImg.jpeg);
+    background-image: url(../public/image/backgroungImgCopy.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0 auto;
@@ -77,14 +77,15 @@ code {
     padding-top: 20px;
     grid-column: 2/3;
     justify-self: end;
-    span{
+    span {
         margin-top: 30px;
         font-size: 18px;
+        cursor: pointer;
     }
 }
 .header__search {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     .header__search__block {
         display: flex;
         height: 100%;
@@ -92,10 +93,11 @@ code {
         input {
             height: 40px;
             width: 100%;
-            font-size: 26px;
+            font-size: 20px;
             border: none;
             border-radius: 7px 0 0 7px;
             background-color: grey;
+            outline: none !important;
         }
         .background__lupa {
             display: flex;
@@ -104,6 +106,7 @@ code {
             background-color: rgb(218, 218, 218);
             border-radius: 0 7px 7px 0;
             align-items: center;
+            cursor: pointer;
         }
     }
 }
@@ -111,11 +114,10 @@ code {
 .center__number {
     width: 50%;
     height: 100%;
-    font-size: 80px;
-    // color: white;
-    text-align: center;
+    font-size: 160px;
     display: flex;
-    align-items: end;
+    align-items: flex-end;
+    justify-content: center;
 }
 .center__weather {
     width: 50%;
@@ -124,16 +126,16 @@ code {
 .footer__info {
     width: 60%;
     height: 100%;
-    h1{
+    h1 {
         font-size: 32px;
     }
-    h2{
+    h2 {
         font-size: 14px;
     }
-    span{
+    span {
         font-size: 18px;
     }
-    .coord{
+    .coord {
         text-align: end;
         font-size: 14px;
     }
@@ -142,7 +144,7 @@ code {
     width: 40%;
     height: 100%;
     padding-left: 2%;
-    iframe{
+    iframe {
         width: 100%;
         height: 100%;
         border: none;
