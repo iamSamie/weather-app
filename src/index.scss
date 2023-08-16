@@ -73,9 +73,14 @@ code {
 }
 .search__results {
     width: calc(75% + 40px);
-    height: 50px;
+    padding-top: 20px;
     grid-column: 2/3;
     justify-self: end;
+    span{
+        margin-top: 30px;
+        font-size: 24px;
+        color: white;
+    }
 }
 .header__search {
     display: flex;

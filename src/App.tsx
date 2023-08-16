@@ -12,7 +12,10 @@ function App() {
                     <div className="header">
                         <div className="header__settings"></div>
                         <Search />
-                        <PickSearchResult />
+                        {sitiesName && sitiesName.map((elem) => (
+                            <PickSearchResult key={elem.lat} {...elem}/>
+                        ))}
+                        {/* <PickSearchResult /> */}
                     </div>
                     <div className="center">
                         <div className="center__number"></div>

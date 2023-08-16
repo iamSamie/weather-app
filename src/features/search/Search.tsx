@@ -7,22 +7,28 @@ function Search() {
     const [searchValue, setSearchValue] = useState('')
     const dispatch = useAppDispatch()
 
-    const handleBlur = (text: string) => {
+    const handleClickSearch = (text: string) => {
         if (searchValue) {
-            dispatch(geoAsyncThunk(text))
+            try {
+                dispatch(geoAsyncThunk(text))
+            } catch (error) {
+                alert('Пожалуйста, введите город!')
+            }
+        } else {
+            alert('Пожалуйста, введите город!')
         }
     }
 
     return (
         <div className="header__search">
             <div className="header__search__block">
-                    <input
-                        value={searchValue}
-                        onChange={(event) => setSearchValue(event.target.value)}
-                    />
-                    <div className="background__lupa" onClick={() => handleBlur(searchValue)}>
-                        <Lupa />
-                    </div>
+                <input
+                    value={searchValue}
+                    onChange={(event) => setSearchValue(event.target.value)}
+                />
+                <div className="background__lupa" onClick={() => handleClickSearch(searchValue)}>
+                    <Lupa />
+                </div>
             </div>
         </div>
     )
