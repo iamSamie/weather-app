@@ -10,8 +10,8 @@ function Search() {
     const val = useAppSelector((state) => state.search.searchValue)
 
     const handleClickSearch = (text: string) => {
-        if (searchValue) {
-            try {
+    if (searchValue) {
+        try {
                 dispatch(geoAsyncThunk(text))
                 dispatch(addSearchValue(searchValue))
             } catch (error) {

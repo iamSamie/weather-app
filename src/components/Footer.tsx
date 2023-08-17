@@ -15,7 +15,7 @@ const Footer = () => {
                     <br />
                     <span>Ощущается как: {Math.round(weather.main.feels_like)}</span>
                     <br />
-                    <span>Ветер: {weather.wind.speed}M/S</span>
+                    <span>Ветер: {weather.wind.speed}м/с</span>
                     <br />
                     <span>Влажность: {Math.round(weather.main.humidity)}%</span>
                     <br />

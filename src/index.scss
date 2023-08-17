@@ -77,10 +77,12 @@ code {
     padding-top: 20px;
     grid-column: 2/3;
     justify-self: end;
+    z-index: 1;
     span {
         margin-top: 30px;
         font-size: 18px;
         cursor: pointer;
+        color: rgb(44, 67, 198);
     }
 }
 .header__search {
@@ -119,6 +121,9 @@ code {
     align-items: flex-end;
     justify-content: center;
 }
+#center__weather__icon{
+    width: -webkit-fill-available;
+}
 .center__weather {
     width: 50%;
     height: 100%;
@@ -128,12 +133,18 @@ code {
         height: 100%;
     }
     .center__weather__three_days{
+        padding-top: 10px;
         width: 50%;
         height: 100%;
         backdrop-filter: blur(20px);
         border-radius: 15px;
+        text-align: center;
         .days{
             height: 33%;
+            img{
+                width: 35px;
+            }
+            padding-bottom: 10px;
         }
     }
 }

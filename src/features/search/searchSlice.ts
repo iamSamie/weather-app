@@ -1,5 +1,10 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
-import { Coord, GeolocationType, RootWeather, WeatherThreeDaysType } from '../../rtk/initialStateTypes'
+import {
+    Coord,
+    GeolocationType,
+    RootWeather,
+    WeatherThreeDaysType,
+} from '../../rtk/initialStateTypes'
 import { geoAsyncThunk } from './GeoAsyncThunk'
 import { fetchWeather } from './WeatherAsyncThunk'
 import { weatherThreeDays } from './WeatherThreeDays'
@@ -26,21 +31,24 @@ const searchSlice = createSlice({
         removeGeo: (state) => {
             state.geo = null
             state.searchValue = ''
-        }
+        },
     },
     extraReducers: (builder) => {
         builder
             .addCase(geoAsyncThunk.fulfilled, (state, action) => {
-            state.geo = action.payload
+                state.status = 'success'
+                state.geo = action.payload
             })
             .addCase(fetchWeather.fulfilled, (state, action) => {
+                state.status = 'success'
                 state.weather = action.payload
                 state.coord = null
             })
             .addCase(weatherThreeDays.fulfilled, (state, action) => {
+                state.status = 'success'
                 state.weatherThreeDays = action.payload
             })
     },
 })
 export default searchSlice.reducer
-export const {addCoordinates, removeGeo, addSearchValue} = searchSlice.actions
+export const { addCoordinates, removeGeo, addSearchValue } = searchSlice.actions
