@@ -11,13 +11,13 @@ const Footer = () => {
                     <h1>
                         {weather.name.toUpperCase()}, {weather.sys.country}
                     </h1>
-                    <span>{weather.weather[0].main.toUpperCase()}</span>
+                    <span>{weather.weather[0].description.toUpperCase()}</span>
                     <br />
-                    <span>FEELS LIKE: {Math.round(weather.main.feels_like)}</span>
+                    <span>Ощущается как: {Math.round(weather.main.feels_like)}</span>
                     <br />
-                    <span>WIND: {weather.wind.speed}M/S</span>
+                    <span>Ветер: {weather.wind.speed}M/S</span>
                     <br />
-                    <span>HUMIDITY: {Math.round(weather.main.humidity)}%</span>
+                    <span>Влажность: {Math.round(weather.main.humidity)}%</span>
                     <br />
                     <p className="coord">
                         {`Lotitude ${weather.coord.lat.toString().slice(0, 2)}˚

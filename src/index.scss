@@ -122,6 +122,20 @@ code {
 .center__weather {
     width: 50%;
     height: 100%;
+    display: flex;
+    .center__weather__icon{
+        width: 50%;
+        height: 100%;
+    }
+    .center__weather__three_days{
+        width: 50%;
+        height: 100%;
+        backdrop-filter: blur(20px);
+        border-radius: 15px;
+        .days{
+            height: 33%;
+        }
+    }
 }
 .footer__info {
     width: 60%;
