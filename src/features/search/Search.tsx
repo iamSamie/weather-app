@@ -30,6 +30,7 @@ function Search() {
         <div className="header__search">
             <div className="header__search__block">
                 <input
+                    placeholder='Введите город...'
                     value={searchValue}
                     onChange={(event) => setSearchValue(event.target.value)}
                 />

@@ -13,7 +13,7 @@ function PickSearchResult(props: GeolocationType) {
 
     return (
         <div className="search__results" onClick={() => handleClick({ lat, lon })}>
-            <span>
+            <span className="search__results_block">
                 {name}, {state}
             </span>
         </div>

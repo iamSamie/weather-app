@@ -1,8 +1,14 @@
-import { useAppSelector } from '../rtk/hooks'
+import { useAppSelector } from '../../rtk/hooks'
 import { Map } from './Map'
 
 const Footer = () => {
     const weather = useAppSelector((state) => state.search.weather)
+
+    const getCoord = (coordinate: number) => {
+        if (weather) {
+            return `${coordinate.toString().slice(0, 2)}˚ ${coordinate.toString().slice(3, 5)}'`
+        }
+    }
 
     return (
         weather && (
@@ -20,12 +26,10 @@ const Footer = () => {
                     <span>Влажность: {Math.round(weather.main.humidity)}%</span>
                     <br />
                     <p className="coord">
-                        {`Lotitude ${weather.coord.lat.toString().slice(0, 2)}˚
-                        ${weather.coord.lat.toString().slice(3, 5)}'`}
+                        {`Lotitude ${getCoord(weather.coord.lat)}`}
                     </p>
                     <p className="coord">
-                        {`Longitude ${weather.coord.lon.toString().slice(0, 2)}˚
-                        ${weather.coord.lon.toString().slice(3, 5)}'`}
+                        {`Longitude ${getCoord(weather.coord.lon)}`}
                     </p>
                 </div>
                 <div className="footer__map">

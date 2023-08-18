@@ -48,7 +48,6 @@ code {
     margin-right: 5%;
     margin-left: 5%;
     backdrop-filter: blur(20px);
-    // background-color: rgb(140, 141, 143);
     opacity: 0.9;
 }
 .header {
@@ -67,6 +66,7 @@ code {
     display: flex;
     height: 34%;
     padding-bottom: 4%;
+    margin-top: 25px;
 }
 
 .header__settings {
@@ -78,11 +78,13 @@ code {
     grid-column: 2/3;
     justify-self: end;
     z-index: 1;
-    span {
+    .search__results_block {
+        padding: 5px;
         margin-top: 30px;
         font-size: 18px;
         cursor: pointer;
-        color: rgb(44, 67, 198);
+        background-color: rgb(109, 109, 109);
+        border-radius: 10px;
     }
 }
 .header__search {
@@ -100,6 +102,9 @@ code {
             border-radius: 7px 0 0 7px;
             background-color: grey;
             outline: none !important;
+            &::placeholder{
+                color: rgb(181, 176, 176);
+            }
         }
         .background__lupa {
             display: flex;
@@ -121,27 +126,27 @@ code {
     align-items: flex-end;
     justify-content: center;
 }
-#center__weather__icon{
+#center__weather__icon {
     width: -webkit-fill-available;
 }
 .center__weather {
     width: 50%;
     height: 100%;
     display: flex;
-    .center__weather__icon{
+    .center__weather__icon {
         width: 50%;
         height: 100%;
     }
-    .center__weather__three_days{
+    .center__weather__three_days {
         padding-top: 10px;
         width: 50%;
         height: 100%;
         backdrop-filter: blur(20px);
         border-radius: 15px;
         text-align: center;
-        .days{
+        .days {
             height: 33%;
-            img{
+            img {
                 width: 35px;
             }
             padding-bottom: 10px;

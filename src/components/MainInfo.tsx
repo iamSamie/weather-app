@@ -1,9 +1,9 @@
-import { useEffect } from "react"
-import { Center } from "./Center"
-import { Footer } from "./Footer"
-import { useAppDispatch, useAppSelector } from "../rtk/hooks"
-import { fetchWeather } from "../features/search/WeatherAsyncThunk"
-import { weatherThreeDays } from "../features/search/WeatherThreeDays"
+import { useEffect } from 'react'
+import { fetchWeather } from '../features/search/WeatherAsyncThunk'
+import { weatherThreeDays } from '../features/search/WeatherThreeDays'
+import { useAppDispatch, useAppSelector } from '../rtk/hooks'
+import { Center } from './Content/Center'
+import { Footer } from './Content/Footer'
 
 const MainInfo = () => {
     const dispatch = useAppDispatch()
